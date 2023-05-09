@@ -84,6 +84,10 @@ button {
     grid-row: 2/3;
 }
 
+.evidences .prev:hover {
+    animation: jump 1s ease infinite;
+}
+
 .evidences .carousel {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -92,6 +96,10 @@ button {
 .evidences .next {
     grid-column: 3/4;
     grid-row: 2/3;
+}
+
+.evidences .next:hover {
+    animation: jump 1s ease infinite;
 }
 
 .evidences button {
@@ -116,7 +124,7 @@ button {
     border-radius: 16px;
     box-sizing: border-box;
     background: white;
-    transition: .5s ease;
+    transition: transform .5s ease;
 }
 
 .evidence .text {
@@ -172,9 +180,85 @@ button {
     border: none;
     border-radius: 8px;
     align-self: center;
+    transition: background-color .3s ease;
+}
+
+.form-container button:hover {
+    background: #175974;
 }
 
 .form-container button:focus {
     outline: none;
-    background: #d5d5d5;
+    background: #175974;
+}
+
+@media screen and (max-width: 600px) {
+    .banner .texts {
+        padding: 0px;
+    }
+    .banner .texts h1 {
+        line-height: 120%;
+        font-size: 32px;
+        margin: 24px 0;
+    }
+    .course-especifications {
+        padding: 52px;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .video-container {
+        gap: 16px;
+        padding: 52px;
+        flex-direction: column;
+    }
+    .video-container h2 {
+        margin-bottom: 16px;
+    }
+    .video iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .evidences {
+        display: flex;
+        flex-direction: column;
+        padding: 52px;
+        gap: 16px;
+    }
+    .evidences button {
+        display: none;
+    }
+    .carousel {
+        flex-direction: column;
+        padding: 0;
+    }
+    .evidence {
+        flex-direction: column;
+        min-width: unset;
+        text-align: center;
+        padding: 30px;
+    }
+    .form-container {
+        width: 100%;
+        padding: 52px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .form-container form {
+        width: 100%;
+    }
+    .form-container form button{
+        width: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(5px)
+    }
+    100% {
+        transform: translateY(-5px)
+    }
 }
