@@ -53,7 +53,7 @@
 
     <section class="evidences">
         <h2>Mais de 500 alunos já iniciaram seus estudos</h2>
-        <button class="prev">
+        <button class="prev" id="prev">
             <img src="images/arrow-prev.svg">
         </button>
         <div class="carousel">
@@ -85,17 +85,18 @@
                 </div>
             </div>
         </div>
-        <button class="next">
+        <button class="next" id="next">
             <img src="images/arrow-next.svg">
         </button>
     </section>
 
     <section class="form-container">
         <h2>Comece agora mesmo e dê o próximo passo da sua carreira</h2>
-        <form action="">
-            <input type="text" name="Name" placeholder="Nome">
-            <input type="email" name="Email" placeholder="E-mail">
+        <form action="https://api.sheetmonkey.io/form/6Qxee3oT7ZnHnughhNDvLy" method="POST">
+            <input type="text" name="Name" placeholder="Nome" required>
+            <input type="email" name="Email" placeholder="E-mail" required>
             <input type="tel" name="Telephone" placeholder="Telefone">
+            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
             <button>Acesse a ementa grátis</button>
         </form>
     </section>
